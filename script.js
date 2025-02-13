@@ -22,8 +22,8 @@ function handleNoClick() {
     const yesButton = document.querySelector('.yes-button');
     
     if (messageCounter >= 13) {
-        noButton.style.display = 'none'; // Hide the button on the 14th click
-        window.alert("I reject your rejection eheh");
+        noButton.style.display = 'none';
+        window.alert("We don't need this button anymore 👹👹👹");
     } else {
         noButton.textContent = messages[messageIndex];
         messageIndex = (messageIndex + 1) % messages.length;
