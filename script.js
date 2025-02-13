@@ -16,6 +16,7 @@ const messages = [
 
 let messageIndex = 0;
 let messageCounter = 0;
+const originalYesSize = window.getComputedStyle(document.querySelector('.yes-button')).fontSize; 
 
 function handleNoClick() {
     const noButton = document.querySelector('.no-button');
@@ -23,7 +24,8 @@ function handleNoClick() {
     
     if (messageCounter >= 13) {
         noButton.style.display = 'none';
-        window.alert("We don't need this button anymore 👹👹👹");
+        window.alert("Error 404: 'No' button not found. You broke it. 👹");
+        yesButton.style.fontSize = originalYesSize;
     } else {
         noButton.textContent = messages[messageIndex];
         messageIndex = (messageIndex + 1) % messages.length;
